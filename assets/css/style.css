@@ -19,7 +19,9 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -113,9 +115,60 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #fff;
 }
+
+#reasons {
+    margin: 20px auto;
+    width: 90%;
+
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    font-size: 280%;
+    text-align: center;
+}
+
+#benefits {
+    margin-bottom: 20px;
+}
+
+#benefits-physical,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp") no-repeat top center / cover;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+    /* Make the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Footer */
 #social-networks {
@@ -161,6 +214,7 @@ main {
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
