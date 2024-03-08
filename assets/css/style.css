@@ -1,5 +1,3 @@
-
-
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
@@ -178,7 +176,7 @@ main {
 
 #times {
     background: url("../images/dublin-city.webp") no-repeat center center / cover;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -193,13 +191,14 @@ main {
     flex-grow: 1;
     /* Creates a grid of meetup time divs over the background image */
     border: 2px solid #fff;
-    
+
 }
-    #times h3 {
-        /* Override the heading color set in general styles */
-        color: #fafafa;
-        margin-bottom: 10px;
-    }
+
+#times h3 {
+    /* Override the heading color set in general styles */
+    color: #fafafa;
+    margin-bottom: 10px;
+}
 
 /* Gallery page */
 #photos img {
@@ -214,23 +213,22 @@ main {
 
 /* Sign-up section */
 #signup {
-    background-image: url("../images/signup-image.webp");
-    background-position: 75%;
+    background: url("../images/signup-image.webp");
     background-size: cover;
+    background-position: 75%;
     flex-grow: 1;
-    padding: 20px 10% 0;
-}
-
-#signup h2
-{
-    color: #fafafa;
-    margin-bottom: 20px;
+    padding: 20px 10% 0 10%;
 }
 
 #signup-form {
     color: #fff;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(60, 60, 60, .6);
     padding: 30px;
+}
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
 }
 
 .text-input {
@@ -238,12 +236,14 @@ main {
     color: #fafafa;
     border: 1px solid #fafafa;
     border-radius: 2px;
+    width: 100%;
+    height: 25px;
     margin-top: 5px;
     margin-bottom: 20px;
     padding: 0 5px;
 }
 
-#radio-buttons {
+.radio-buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -255,7 +255,6 @@ main {
     border-radius: 2px;
     background-color: #454b1b;
     color: #fafafa;
-    font-size: 100%;
 }
 
 
@@ -276,7 +275,7 @@ main {
 }
 
 /* Media query: large or landscape phones (576px and up) */
-@media screen and (min-width: 576px) { 
+@media screen and (min-width: 576px) {
     #photos {
         column-count: 2;
         column-gap: 0;
@@ -333,20 +332,42 @@ main {
         width: 100%;
     }
 
-    #benefits-physical > div,
-    #benefits-mental > div {
+    #benefits-physical>div,
+    #benefits-mental>div {
         width: 75%;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         text-align: right;
         align-self: flex-end;
     }
-    
+
     /* Gallery */
     #photos {
         column-count: 3;
         column-gap: 0;
+    }
+
+    /* Signup Section */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        position: absolute;
+        left: 10%;
+        top: 150px;
+        max-width: 400px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
     }
 }
 
@@ -368,7 +389,7 @@ main {
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -380,11 +401,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
